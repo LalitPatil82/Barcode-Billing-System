@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{154CE756-11E6-40C7-8DC9-26CAF045D05A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Project.My.MyApplication</StartupObject>
+    <RootNamespace>Project</RootNamespace>
+    <AssemblyName>Login</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Login.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Login.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao.vb" />
+    <Compile Include="Mobile\Add_Customer.Designer.vb">
+      <DependentUpon>Add_Customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Add_Customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Add_product.Designer.vb">
+      <DependentUpon>Add_product.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Add_product.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Add_Purchase.Designer.vb">
+      <DependentUpon>Add_Purchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Add_Purchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Bill_View_rpt.Designer.vb">
+      <DependentUpon>Bill_View_rpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Bill_View_rpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Customer.Designer.vb">
+      <DependentUpon>Customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Delete_IMEI.Designer.vb">
+      <DependentUpon>Delete_IMEI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Delete_IMEI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\IMEI_store.Designer.vb">
+      <DependentUpon>IMEI_store.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\IMEI_store.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Invoice.Designer.vb">
+      <DependentUpon>Invoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Invoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Product.Designer.vb">
+      <DependentUpon>Product.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Product.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Purchase.Designer.vb">
+      <DependentUpon>Purchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Purchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Purchase_detail_rpt.Designer.vb">
+      <DependentUpon>Purchase_detail_rpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Purchase_detail_rpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Purchase_det_rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Purchase_det_rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mobile\Purchase_reports_rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Purchase_reports_rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mobile\Purchase_rpt.Designer.vb">
+      <DependentUpon>Purchase_rpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Purchase_rpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Purchase_Summary_view_rtp.Designer.vb">
+      <DependentUpon>Purchase_Summary_view_rtp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Purchase_Summary_view_rtp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Reset_pass.Designer.vb">
+      <DependentUpon>Reset_pass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Reset_pass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Sales_bill_rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sales_bill_rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mobile\Add_Supplier.Designer.vb">
+      <DependentUpon>Add_Supplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Add_Supplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Stock.Designer.vb">
+      <DependentUpon>Stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Verify_code.Designer.vb">
+      <DependentUpon>Verify_code.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Verify_code.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="Mobile\Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Forgot_Password.Designer.vb">
+      <DependentUpon>Forgot_Password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Forgot_Password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Gif.Designer.vb">
+      <DependentUpon>Gif.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Gif.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mobile\Add_acc.Designer.vb">
+      <DependentUpon>Add_acc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Add_acc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Mobile\Supplier.Designer.vb">
+      <DependentUpon>Supplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Supplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales_Detail_report.Designer.vb">
+      <DependentUpon>Sales_Detail_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Detail_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales_detail_rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sales_detail_rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sales_report.Designer.vb">
+      <DependentUpon>Sales_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales_rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sales_rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Stock_report.Designer.vb">
+      <DependentUpon>Stock_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock_rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock_rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mobile\Add_Customer.resx">
+      <DependentUpon>Add_Customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Add_product.resx">
+      <DependentUpon>Add_product.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Add_Purchase.resx">
+      <DependentUpon>Add_Purchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Bill_View_rpt.resx">
+      <DependentUpon>Bill_View_rpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Customer.resx">
+      <DependentUpon>Customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Delete_IMEI.resx">
+      <DependentUpon>Delete_IMEI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Forgot_Password.resx">
+      <DependentUpon>Forgot_Password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\IMEI_store.resx">
+      <DependentUpon>IMEI_store.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Gif.resx">
+      <DependentUpon>Gif.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Invoice.resx">
+      <DependentUpon>Invoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Add_acc.resx">
+      <DependentUpon>Add_acc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Product.resx">
+      <DependentUpon>Product.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Purchase.resx">
+      <DependentUpon>Purchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Purchase_detail_rpt.resx">
+      <DependentUpon>Purchase_detail_rpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Purchase_det_rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Purchase_det_rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Purchase_reports_rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Purchase_reports_rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Purchase_rpt.resx">
+      <DependentUpon>Purchase_rpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Purchase_Summary_view_rtp.resx">
+      <DependentUpon>Purchase_Summary_view_rtp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Reset_pass.resx">
+      <DependentUpon>Reset_pass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Sales_bill_rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Sales_bill_rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Add_Supplier.resx">
+      <DependentUpon>Add_Supplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Stock.resx">
+      <DependentUpon>Stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Verify_code.resx">
+      <DependentUpon>Verify_code.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mobile\Supplier.resx">
+      <DependentUpon>Supplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales_Detail_report.resx">
+      <DependentUpon>Sales_Detail_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales_detail_rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Sales_detail_rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales_report.resx">
+      <DependentUpon>Sales_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales_rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Sales_rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock_report.resx">
+      <DependentUpon>Stock_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock_rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Stock_rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rows-of-new-smart-phones-on-display-in-ee-mobile-phone-shop-TRB3M2 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rows-of-new-smart-phones-on-display-in-ee-mobile-phone-shop-TRB3M2 %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
